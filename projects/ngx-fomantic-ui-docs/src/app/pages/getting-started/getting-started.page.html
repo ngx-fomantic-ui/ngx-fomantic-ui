@@ -1,0 +1,51 @@
+<demo-page-title>
+    <div header>Getting Started</div>
+    <div sub-header>
+        <p>Fomantic UI Angular 7 Integrations, written in pure Angular - <strong>no JQuery required</strong>.</p>
+    </div>
+</demo-page-title>
+<demo-page-content>
+    <h2 class="ui dividing header">Introduction</h2>
+    <p>
+        Angular and jQuery don't go together - this is the fundamental principal
+        of this library. It provides Angular component versions of the Fomantic
+        UI modules, so that <b>you don't need to add jQuery to your app</b>.
+    </p>
+    <p>
+        Note that only Fomantic UI elements that use jQuery
+        are recreated here - those written purely in CSS aren't
+        included as they can be used in Angular apps already.
+    </p>
+
+    <h2 class="ui dividing header">Installation</h2>
+    <p>To install this library, run:</p>
+    <div class="ui segment">
+        <demo-codeblock language="bash" [src]="installCode"></demo-codeblock>
+    </div>
+    <p>Next include the Fomantic UI CSS file in your <code>index.html</code> (you can include a manually compiled one if you use themes):</p>
+    <div class="ui segment">
+        <demo-codeblock language="markup" [src]="includeCssCode"></demo-codeblock>
+    </div>
+    <p>Once installed you need to import the main module:</p>
+    <div class="ui segment">
+        <demo-codeblock language="typescript" [src]="importCode"></demo-codeblock>
+    </div>
+    <p>Finally import the main module into your application module:</p>
+    <div class="ui segment">
+        <demo-codeblock language="typescript" [src]="moduleImportCode"></demo-codeblock>
+    </div>
+    <p>N.B. you can import individual component modules:</p>
+    <div class="ui segment">
+        <demo-codeblock language="typescript" [src]="individualImportCode"></demo-codeblock>
+    </div>
+    <p>Now you're good to go!</p>
+    <p><strong>Note</strong> if you're using SystemJS, add the following to your <code>systemjs.config.js</code> file:</p>
+    <div class="ui segment">
+        <demo-codeblock language="typescript" [src]="systemJSCode"></demo-codeblock>
+    </div>
+    <h2 class="ui dividing header">Dependencies</h2>
+    <div class="ui bulleted list">
+        <div class="item"><a href="https://angular.io">Angular</a> (^7.0.0)</div>
+        <div class="item"><a href="http://fomantic-ui.com/">Fomantic UI CSS</a> (^2.7.4) (jQuery is <strong>not</strong> required)</div>
+    </div>
+</demo-page-content>

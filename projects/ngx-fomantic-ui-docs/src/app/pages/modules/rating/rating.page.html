@@ -1,0 +1,39 @@
+<demo-page-title>
+    <div header>Rating</div>
+    <div sub-header>
+        <p>A rating indicates user interest in content</p>
+    </div>
+</demo-page-title>
+<demo-page-content>
+    <h2 class="ui dividing header">Examples</h2>
+    <demo-example [code]="exampleStandardTemplate">
+        <div info>
+            <h4 class="ui header">Rating</h4>
+            <p>A basic rating</p>
+        </div>
+        <example-rating-standard result></example-rating-standard>
+    </demo-example>
+    <demo-example [code]="exampleStyledTemplate">
+        <div info>
+            <h4 class="ui header">Styled Rating</h4>
+            <p>Star and heart ratings are fully supported</p>
+        </div>
+        <example-rating-styled result></example-rating-styled>
+    </demo-example>
+    <demo-example [code]="exampleColoredTemplate">
+        <div info>
+            <h4 class="ui header">Colored Rating <div class="ui black label">New in 2.7</div></h4>
+            <p>You can specify any color of the FUI color palette</p>
+        </div>
+        <example-rating-colored result></example-rating-colored>
+    </demo-example>
+        <demo-example [code]="exampleSizedTemplate">
+        <div info>
+            <h4 class="ui header">Size</h4>
+            <p>A rating can vary in size</p>
+        </div>
+        <example-rating-sized result></example-rating-sized>
+    </demo-example>
+    <h2 id="api" class="ui dividing header">API</h2>
+    <demo-api [api]="api"></demo-api>
+</demo-page-content>

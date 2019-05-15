@@ -1,0 +1,84 @@
+<demo-page-title>
+    <div header>Popup</div>
+    <div sub-header>
+        <p>A popup displays additional information on top of a page</p>
+    </div>
+</demo-page-title>
+<demo-page-content>
+    <h2 class="ui dividing header">Examples</h2>
+
+    <demo-example [code]="exampleStandardTemplate">
+        <div info>
+            <h4 class="ui header">Popup</h4>
+            <p>An element can specify popup content to appear</p>
+        </div>
+        <example-popup-standard result></example-popup-standard>
+    </demo-example>
+
+    <demo-example [code]="exampleTemplateTemplate">
+        <div info>
+            <h4 class="ui header">Template</h4>
+            <p>You can use a <code>template</code> element for a popup.</p>
+            <p>
+                If you need to access a local variable, such as within an <code>*ngFor</code>,
+                either place the template within the scope of the repeated elements, or bind
+                <code>popupTemplateContext</code> to the variable and access it in the template
+                as <code>popup.context</code>.
+            </p>
+            <p>
+                Adding the <code>autofocus</code> attribute to an element
+                inside the template will give it focus when the popup opens.
+            </p>
+        </div>
+        <example-popup-template result></example-popup-template>
+    </demo-example>
+
+    <demo-example [code]="examplePlacementTemplate">
+        <div info>
+            <h4 class="ui header">Placement</h4>
+            <p>You can control the placement (position) of each popup.</p>
+        </div>
+        <div result>
+            <example-popup-placement class="ui cards" [position]="position"></example-popup-placement>
+            <br>
+            <fui-select class="selection" [(ngModel)]="position" [options]="placements" [isSearchable]="true" #placementSelect>
+                <fui-select-option *ngFor="let p of placementSelect.availableOptions" [value]="p"></fui-select-option>
+            </fui-select>
+        </div>
+    </demo-example>
+
+    <demo-example [code]="exampleSizeTemplate">
+        <div info>
+            <h4 class="ui header">Size</h4>
+            <p>A popup can vary in size.</p>
+        </div>
+        <example-popup-size result></example-popup-size>
+    </demo-example>
+
+    <demo-example [code]="exampleWidthTemplate">
+        <div info>
+            <h4 class="ui header">Width</h4>
+            <p>A popup can be extra wide to allow for longer content</p>
+            <p>A <code>flowing</code> popup have no maximum width and continue to flow to fit its content</p>
+        </div>
+        <example-popup-width result></example-popup-width>
+    </demo-example>
+
+    <h4 class="ui header">Manual Popup Trigger</h4>
+    <p>Manually triggering a popup is shown below:</p>
+    <div class="ui segment">
+        <demo-codeblock language="markup" [src]="manualPopupMarkup"></demo-codeblock>
+    </div>
+    <div class="ui segment">
+        <demo-codeblock language="typescript" [src]="manualPopupCode"></demo-codeblock>
+    </div>
+
+    <h4 class="ui header">Global Configuration</h4>
+    <p>Setting global defaults for popups can be done as shown below. These defaults get overwritten by inputs set on the popups themselves.</p>
+    <div class="ui segment">
+        <demo-codeblock language="typescript" [src]="globalConfigCode"></demo-codeblock>
+    </div>
+
+    <h2 id="api" class="ui dividing header">API</h2>
+    <demo-api [api]="api"></demo-api>
+</demo-page-content>

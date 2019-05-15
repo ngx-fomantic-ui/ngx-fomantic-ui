@@ -1,0 +1,3 @@
+export {
+  FuiProgressModule
+} from './internal';

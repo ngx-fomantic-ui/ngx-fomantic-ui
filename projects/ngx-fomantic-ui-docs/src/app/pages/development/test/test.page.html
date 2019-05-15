@@ -1,0 +1,89 @@
+<demo-page-title>
+  <div header>Test</div>
+  <div sub-header>
+    <p>Test component!</p>
+  </div>
+</demo-page-title>
+<demo-page-content>
+  <h2 class="ui dividing header">Types</h2>
+  <div class="ui segment">
+    <h4>Minimal</h4>
+    <fui-toast [dismissible]="false">
+      <ng-template fuiToastMessage>I am a toast, nice to meet you!</ng-template>
+    </fui-toast>
+  </div>
+  <div class="ui segment">
+    <h4>ProgressBar</h4>
+    <fui-toast [showProgress]="'bottom'" [displayTime]="5000">
+      <ng-template fuiToastTitle>LOOK</ng-template>
+      <ng-template fuiToastMessage>See, how long i will last</ng-template>
+    </fui-toast>
+  </div>
+  <h2 class="ui dividing header">Variations</h2>
+  <div class="ui segment">
+    <h4>Toast Type</h4>
+    <fui-toast [class]="'success'">
+      <ng-template fuiToastMessage>You're using the good framework!</ng-template>
+    </fui-toast>
+    <br/>
+    <fui-toast [class]="'error'">
+      <ng-template fuiToastMessage>An error occured!</ng-template>
+    </fui-toast>
+    <br/>
+    <fui-toast [class]="'warning'">
+      <ng-template fuiToastMessage>Behind you!</ng-template>
+    </fui-toast>
+  </div>
+  <h2 class="ui dividing header">Duration</h2>
+  <div class="ui segment">
+    <h4>Toast Type</h4>
+    <fui-toast [displayTime]="5000">
+      <ng-template fuiToastMessage>You will see me for 5 seconds.</ng-template>
+    </fui-toast>
+    <br/>
+    <fui-toast [displayTime]="0">
+      <ng-template fuiToastMessage>I'll stay here until you click on me!</ng-template>
+    </fui-toast>
+  </div>
+  <h2 class="ui dividing header">Use Message Style</h2>
+  <div class="ui segment">
+    <fui-toast [displayTime]="5000" [class]="'purple'" [className]="'ui message'">
+      <ng-template fuiToastTitle>Awesome</ng-template>
+      <ng-template fuiToastMessage>I got my style from the message class</ng-template>
+    </fui-toast>
+  </div>
+  <h2 class="ui dividing header">Decreasing ProgressBar</h2>
+  <div class="ui segment">
+    <fui-toast [showProgress]="'top'" [progressUp]="false" [displayTime]="5000">
+      <ng-template fuiToastTitle>LOOK</ng-template>
+      <ng-template fuiToastMessage>See, how long i will last</ng-template>
+    </fui-toast>
+  </div>
+  <h2 class="ui dividing header">Without icon</h2>
+  <div class="ui segment">
+    <fui-toast [class]="'warning'" [showIcon]="false">
+      <ng-template fuiToastMessage>Hey, where is my icon?</ng-template>
+    </fui-toast>
+  </div>
+  <h2 class="ui dividing header">Individual icon</h2>
+  <div class="ui segment">
+    <fui-toast [class]="'info'" [showIcon]="'microphone'">
+      <ng-template fuiToastMessage>Listen to me</ng-template>
+    </fui-toast>
+  </div>
+  <h2 class="ui dividing header">Close Icon</h2>
+  <div class="ui segment">
+    <fui-toast [class]="'info'" [displayTime]="0" [closeIcon]="true">
+      <ng-template fuiToastMessage>Click on the X to close me</ng-template>
+    </fui-toast>
+  </div>
+  <br/>
+  <h2 class="ui dividing header">Examples</h2>
+  <div class="ui segment">
+    <br/>
+    <button type="button" class="ui button" (click)="addToast()">Add toast</button>
+    <button type="button" class="ui button" (click)="addToast2()">Add toast</button>
+    <br/>
+    <fui-toast-container #toastContainer></fui-toast-container>
+  </div>
+</demo-page-content>

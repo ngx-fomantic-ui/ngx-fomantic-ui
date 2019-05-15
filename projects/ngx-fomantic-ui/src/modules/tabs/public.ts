@@ -1,0 +1,3 @@
+export {
+  FuiTabsModule
+} from './internal';

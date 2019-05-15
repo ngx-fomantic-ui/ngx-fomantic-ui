@@ -1,0 +1,68 @@
+<demo-page-title>
+    <div header>Toast</div>
+    <div sub-header>
+        <p>A toast allows users to be notified of an event</p>
+    </div>
+</demo-page-title>
+<demo-page-content>
+    <h2 class="ui dividing header">Examples</h2>
+    <demo-example [code]="exampleMinimalTemplate">
+        <div info>
+            <h4 class="ui header">Minimal</h4>
+            <p>A minimal toast will just display a message.</p>
+        </div>
+        <example-toast-minimal result></example-toast-minimal>
+    </demo-example>
+    <demo-example [code]="exampleTitledTemplate">
+        <div info>
+            <h4 class="ui header">Titled</h4>
+            <p>You can add a title to your toast.</p>
+        </div>
+        <example-toast-titled result></example-toast-titled>
+    </demo-example>
+        <demo-example [code]="exampleProgressbarTemplate">
+        <div info>
+            <h4 class="ui header">ProgressBar</h4>
+            <p>You can attach a progressbar to your toast.
+        </div>
+        <example-toast-progressbar result></example-toast-progressbar>
+    </demo-example>
+    <demo-example [code]="exampleTypeTemplate">
+        <div info>
+            <h4 class="ui header">Toast Type</h4>
+            <p>A toast can be used to display different types of informations.</p>
+        </div>
+        <example-toast-type result></example-toast-type>
+    </demo-example>
+    <demo-example [code]="exampleDurationTemplate">
+        <div info>
+            <h4 class="ui header">Duration</h4>
+            <p>You can choose how long a toast should be displayed.</p>
+        </div>
+        <example-toast-duration result></example-toast-duration>
+    </demo-example>
+    <demo-example [code]="exampleMessageStyleTemplate">
+        <div info>
+            <h4 class="ui header">Use Message Style</h4>
+            <p>You can use all of the styles and colors from the message component.</p>
+        </div>
+        <example-toast-messagestyle result></example-toast-messagestyle>
+    </demo-example>
+    <demo-example [code]="exampleDecreasingTemplate">
+        <div info>
+            <h4 class="ui header">Decreasing ProgressBar</h4>
+            <p>The progressbar could be be lowered instead of raised.</p>
+        </div>
+        <example-toast-decreasing result></example-toast-decreasing>
+    </demo-example>
+    <demo-example [code]="exampleIconTemplate">
+        <div info>
+            <h4 class="ui header">Icons</h4>
+            <p>With, without or with close icon.</p>
+        </div>
+        <example-toast-icon result></example-toast-icon>
+    </demo-example>
+
+    <h2 id="api" class="ui dividing header">API</h2>
+    <demo-api [api]="api"></demo-api>
+</demo-page-content>

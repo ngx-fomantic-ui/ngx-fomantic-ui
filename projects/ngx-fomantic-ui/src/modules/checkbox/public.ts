@@ -1,0 +1,3 @@
+export {
+  FuiCheckboxModule
+} from './internal';

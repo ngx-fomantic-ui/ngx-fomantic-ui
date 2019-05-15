@@ -1,0 +1,3 @@
+export {
+  FuiCollapseModule
+} from './internal';

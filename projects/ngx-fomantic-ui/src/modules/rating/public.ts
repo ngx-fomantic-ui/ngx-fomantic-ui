@@ -1,0 +1,3 @@
+export {
+  FuiRatingModule
+} from './internal';

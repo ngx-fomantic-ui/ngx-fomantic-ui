@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-fomantic-ui",
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "date-fns": "dateFns",
+      "date-fns/locale/en": "defaultLocale",
+      "extend": "extend",
+      "popper.js": "Popper"
+    }
+  }
+}

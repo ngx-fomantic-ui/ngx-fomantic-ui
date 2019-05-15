@@ -1,0 +1,3 @@
+export {
+  FuiDimmerModule
+} from './internal';
