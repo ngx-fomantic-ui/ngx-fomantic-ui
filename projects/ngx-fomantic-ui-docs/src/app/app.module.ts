@@ -12,11 +12,13 @@ import {AppComponent} from './app.component';
 
 import css from 'highlight.js/lib/languages/css';
 import bash from 'highlight.js/lib/languages/bash';
+import javascript from 'highlight.js/lib/languages/javascript';
 import typescript from 'highlight.js/lib/languages/typescript';
 import {HIGHLIGHT_OPTIONS, HighlightModule} from 'ngx-highlightjs';
 
 export function hljsLanguages() {
   return [
+    {name: 'javascript', func: javascript},
     {name: 'typescript', func: typescript},
     {name: 'bash', func: bash},
     {name: 'markup', func: css}

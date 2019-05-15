@@ -1,13 +1,13 @@
 <!-- Logo -->
 <p align="center">
-  <a href="https://tryharddood.github.io/ngx-fomantic-ui/">
-    <img height="128" width="238" src="https://raw.githubusercontent.com/tryharddood/ngx-fomantic-ui/master/demo/src/assets/logo.png">
+  <a href="https://ngx-fomantic-ui.github.io/ngx-fomantic-ui/">
+    <img height="128" width="238" src="https://raw.githubusercontent.com/ngx-fomantic-ui/ngx-fomantic-ui/master/projects/ngx-fomantic-ui-docs/src/assets/logo.png">
   </a>
 </p>
 
 <!-- Name -->
 <h1 align="center">
-  <a href="https://tryharddood.github.io/ngx-fomantic-ui">ngx-fomantic-ui</a>
+  <a href="https://ngx-fomantic-ui.github.io/ngx-fomantic-ui">ngx-fomantic-ui</a>
 </h1>
 
 <!-- Badges -->
@@ -35,7 +35,7 @@ Note that only Fomantic UI elements that use jQuery are recreated here - those w
 
 ## Installation & Usage
 
-See the [Documentation](https://tryharddood.github.io/ngx-fomantic-ui) for installation instructions and extensive examples.
+See the [Documentation](https://ngx-fomantic-ui.github.io/ngx-fomantic-ui) for installation instructions and extensive examples.
 
 ## Dependencies
 
