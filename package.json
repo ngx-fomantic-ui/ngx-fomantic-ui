@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "lib:compile:locales": "tsc --project ./projects/ngx-fomantic-ui/src/behaviors/localization/tsconfig.locales.json && node ./projects/ngx-fomantic-ui/scripts/locales",
     "build:lib:prod": "ng build ngx-fomantic-ui && npm run lib:compile:locales",
-    "build:docs:prod": "ng build ngx-fomantic-ui-docs",
+    "build:docs:prod": "ng build ngx-fomantic-ui-docs --prod",
     "serve:docs": "ng serve ngx-fomantic-ui-docs"
   },
   "private": true,
