@@ -14,7 +14,7 @@ export class GettingStartedPage {
     public installCode = `$ npm install ngx-fomantic-ui --save`;
 
     public includeCssCode =
-`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.4/dist/semantic.min.css">`;
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.5/dist/semantic.min.css">`;
 
     public importCode = `import {FomanticUIModule} from 'ngx-fomantic-ui';`;
     public moduleImportCode = `
