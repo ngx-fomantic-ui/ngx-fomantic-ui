@@ -39,7 +39,7 @@ export class FuiSelectOption<T> extends FuiDropdownMenuItem {
   public renderedText?: string;
   public usesTemplate: boolean;
   // Placeholder to draw template beside.
-  @ViewChild('templateSibling', {read: ViewContainerRef})
+  @ViewChild('templateSibling', {read: ViewContainerRef, static: false})
   public templateSibling: ViewContainerRef;
 
   constructor(renderer: Renderer2, element: ElementRef, public changeDetector: ChangeDetectorRef) {
