@@ -3,12 +3,8 @@ node_js:
   - "9"
 dist: trusty
 sudo: required
-branches:
-  only:
-  - master
 before_script:
   - npm install -g @angular/cli
-  - npm install
 
 script:
   # TODO: Fix project lint
