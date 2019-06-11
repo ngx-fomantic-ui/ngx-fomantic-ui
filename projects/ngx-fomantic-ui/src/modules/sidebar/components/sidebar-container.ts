@@ -18,10 +18,10 @@ export class FuiSidebarContainer implements AfterContentInit {
   @HostBinding('class.pushable')
   public readonly hasClasses: boolean;
 
-  @ContentChild(FuiSidebar)
+  @ContentChild(FuiSidebar, {static: false})
   public sidebar: FuiSidebar;
 
-  @ContentChild(FuiSidebarSibling)
+  @ContentChild(FuiSidebarSibling, {static: false})
   public sibling: FuiSidebarSibling;
 
   constructor() {

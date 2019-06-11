@@ -21,7 +21,7 @@ import {FuiDropdownMenu} from './dropdown-menu';
 export class FuiDropdown implements AfterContentInit {
 
   public service: DropdownService;
-  @ContentChild(FuiDropdownMenu)
+  @ContentChild(FuiDropdownMenu, {static: false})
   private _menu: FuiDropdownMenu;
 
   constructor(private _element: ElementRef) {

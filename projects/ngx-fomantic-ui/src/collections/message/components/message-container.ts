@@ -27,7 +27,7 @@ import {MessageController} from '../classes/message-controller';
 `]
 })
 export class FuiMessageContainer {
-  @ViewChild('containerSibling', {read: ViewContainerRef})
+  @ViewChild('containerSibling', {read: ViewContainerRef, static: false})
   public containerSibling: ViewContainerRef;
   private _messages: ActiveMessage[];
   private _queue: ActiveMessage[];

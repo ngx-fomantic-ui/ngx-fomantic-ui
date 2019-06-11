@@ -54,16 +54,16 @@ export abstract class FuiSelectBase<T, U> implements AfterContentInit, OnDestroy
   public transitionDuration: number;
   @Output('touched')
   public onTouched: EventEmitter<void>;
-  @ViewChild(FuiDropdownMenu)
+  @ViewChild(FuiDropdownMenu, {static: false})
   protected _menu: FuiDropdownMenu;
   // Keep track of all of the rendered select options. (Rendered by the user using *ngFor).
   @ContentChildren(FuiSelectOption, {descendants: true})
   protected _renderedOptions: QueryList<FuiSelectOption<T>>;
   // Keep track of all of the subscriptions to the selected events on the rendered options.
   private _renderedSubscriptions: Subscription[];
-  @ViewChild(FuiSelectSearch)
+  @ViewChild(FuiSelectSearch, {static: false})
   private _internalSearch?: FuiSelectSearch;
-  @ContentChild(FuiSelectSearch)
+  @ContentChild(FuiSelectSearch, {static: false})
   private _manualSearch?: FuiSelectSearch;
   @Input('tabindex')
   private _tabIndex?: number;

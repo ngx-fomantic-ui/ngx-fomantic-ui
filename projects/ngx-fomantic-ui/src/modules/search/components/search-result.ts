@@ -25,7 +25,7 @@ export class FuiSearchResult<T> {
   @Input()
   public formatter: (obj: T, query: string) => string;
   // Placeholder to draw template beside.
-  @ViewChild('templateSibling', {read: ViewContainerRef})
+  @ViewChild('templateSibling', {read: ViewContainerRef, static: false})
   public templateSibling: ViewContainerRef;
 
   constructor(public componentFactory: FuiComponentFactory) {

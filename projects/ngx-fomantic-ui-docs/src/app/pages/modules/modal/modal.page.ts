@@ -172,7 +172,7 @@ export interface IContext {
 
 @Component({})
 export class MyComponent {
-    @ViewChild('modalTemplate')
+    @ViewChild('modalTemplate', {static: false})
     public modalTemplate:ModalTemplate<IContext, string, string>
 
     constructor(public modalService:FuiModalService) {}
@@ -236,7 +236,7 @@ this.modalService
     template: exampleTemplateTemplate
 })
 export class ModalExampleTemplate {
-    @ViewChild('modalTemplate')
+    @ViewChild('modalTemplate', {static: false})
     public modalTemplate: ModalTemplate<{ data: string }, string, string>;
 
     public dynamicContent = 'Example of dynamic content.';

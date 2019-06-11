@@ -86,9 +86,9 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
   // Whether or not the backround dimmer is active.
   public dimBackground: boolean;
   // `ViewContainerRef` for the element the template gets injected as a sibling of.
-  @ViewChild('templateSibling', {read: ViewContainerRef})
+  @ViewChild('templateSibling', {read: ViewContainerRef, static: false})
   public templateSibling: ViewContainerRef;
-  @ViewChild('modal')
+  @ViewChild('modal', {static: false})
   private _modalElement: ElementRef;
   // Whether or not the modal should always display a scrollbar.
   private _mustAlwaysScroll: boolean;

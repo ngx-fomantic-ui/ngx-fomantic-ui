@@ -44,7 +44,7 @@ export class FuiMultiSelectLabel<T> extends FuiTransition {
   @Input()
   public formatter: (obj: T) => string;
   // Placeholder to draw template beside.
-  @ViewChild('templateSibling', {read: ViewContainerRef})
+  @ViewChild('templateSibling', {read: ViewContainerRef, static: false})
   public templateSibling: ViewContainerRef;
   private _transitionController: TransitionController;
 
