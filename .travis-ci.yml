@@ -6,8 +6,16 @@ sudo: required
 before_script:
   - npm install -g @angular/cli
 
-script:
-  # TODO: Fix project lint
-  #- ng lint
-  - npm run build:lib:prod
-  - npm run build:docs:prod
+jobs:
+  include:
+    # TODO: Fix ng lint
+    #- stage: "Tests"
+    #  name: "Angular lint"
+    #  script:
+    #    - ng lint
+    - stage: "ngx-fomantic-ui library"
+      script:
+        - npm run build:lib:prod
+    - stage: "ngx-fomantic-ui documentation"
+      script:
+        - npm run build:docs:prod
