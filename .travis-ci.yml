@@ -13,9 +13,7 @@ jobs:
     #  name: "Angular lint"
     #  script:
     #    - ng lint
-    - stage: "ngx-fomantic-ui library"
+    - stage: "Building"
       script:
         - npm run build:lib:prod
-    - stage: "ngx-fomantic-ui documentation"
-      script:
         - npm run build:docs:prod
