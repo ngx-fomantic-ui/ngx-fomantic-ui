@@ -86,7 +86,7 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
   // Whether or not the backround dimmer is active.
   public dimBackground: boolean;
   // `ViewContainerRef` for the element the template gets injected as a sibling of.
-  @ViewChild('templateSibling', {read: ViewContainerRef, static: false})
+  @ViewChild('templateSibling', {read: ViewContainerRef, static: true})
   public templateSibling: ViewContainerRef;
   @ViewChild('modal', {static: false})
   private _modalElement: ElementRef;

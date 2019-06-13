@@ -26,7 +26,7 @@ export interface IOptionContext<T> extends ITemplateRefContext<T> {
   query?: string;
 }
 
-// We use generic type T to specify the type of the options we are working with,
+// We use generic type T to smenuTransitionDurationpecify the type of the options we are working with,
 // and U to specify the type of the property of the option used as the value.
 export abstract class FuiSelectBase<T, U> implements AfterContentInit, OnDestroy {
 
@@ -54,7 +54,7 @@ export abstract class FuiSelectBase<T, U> implements AfterContentInit, OnDestroy
   public transitionDuration: number;
   @Output('touched')
   public onTouched: EventEmitter<void>;
-  @ViewChild(FuiDropdownMenu, {static: false})
+  @ViewChild(FuiDropdownMenu, {static: true})
   protected _menu: FuiDropdownMenu;
   // Keep track of all of the rendered select options. (Rendered by the user using *ngFor).
   @ContentChildren(FuiSelectOption, {descendants: true})

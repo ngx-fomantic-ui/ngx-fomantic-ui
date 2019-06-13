@@ -71,7 +71,7 @@ export class FuiPopup implements IPopup {
   // Fires when the popup closes (and the animation is completed).
   public onClose: EventEmitter<void>;
   // `ViewContainerRef` for the element the template gets injected as a sibling of.
-  @ViewChild('templateSibling', {read: ViewContainerRef, static: false})
+  @ViewChild('templateSibling', {read: ViewContainerRef, static: true})
   public templateSibling: ViewContainerRef;
   @HostBinding('attr.tabindex')
   public readonly tabindex: number;
