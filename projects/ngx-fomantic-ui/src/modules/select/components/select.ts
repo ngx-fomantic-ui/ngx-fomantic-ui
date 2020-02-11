@@ -71,7 +71,7 @@ export class FuiSelect<T, U> extends FuiSelectBase<T, U> implements ICustomValue
   public selectedOptionChange: EventEmitter<U>;
   // Stores the value written by ngModel before it can be matched to an option from `options`.
   private _writtenOption?: U;
-  @ViewChild('optionTemplateSibling', {read: ViewContainerRef, static: false})
+  @ViewChild('optionTemplateSibling', {read: ViewContainerRef, static: true})
   private _optionTemplateSibling: ViewContainerRef;
 
   constructor(element: ElementRef, localizationService: FuiLocalizationService) {
