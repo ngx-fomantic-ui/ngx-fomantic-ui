@@ -12,7 +12,8 @@ import {
   QueryList,
   TemplateRef,
   ViewChild,
-  ViewContainerRef
+  ViewContainerRef,
+  AfterViewInit
 } from '@angular/core';
 import {Subscription} from 'rxjs';
 import {DropdownService, FuiDropdownMenu} from '../../dropdown/internal';
@@ -28,7 +29,7 @@ export interface IOptionContext<T> extends ITemplateRefContext<T> {
 
 // We use generic type T to smenuTransitionDurationpecify the type of the options we are working with,
 // and U to specify the type of the property of the option used as the value.
-export abstract class FuiSelectBase<T, U> implements AfterContentInit, OnDestroy {
+export abstract class FuiSelectBase<T, U> implements AfterViewInit, OnDestroy {
 
   public dropdownService: DropdownService;
   public searchService: SearchService<T, U>;
@@ -250,7 +251,7 @@ export abstract class FuiSelectBase<T, U> implements AfterContentInit, OnDestroy
     return this._localizationService.override<'select'>(this._localeValues, this.localeOverrides);
   }
 
-  public ngAfterContentInit(): void {
+  public ngAfterViewInit(): void {
     this._menu.service = this.dropdownService;
     // We manually specify the menu items to the menu because the @ContentChildren doesn't pick up our dynamically rendered items.
     this._menu.items = this._renderedOptions;
