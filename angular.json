@@ -15,7 +15,12 @@
             "tsConfig": "projects/ngx-fomantic-ui/tsconfig.lib.json",
             "project": "projects/ngx-fomantic-ui/ng-package.json"
           }
-        },
+        ,          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-fomantic-ui/tsconfig.lib.prod.json"
+            }
+          }
+},
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -52,6 +57,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/ngx-fomantic-ui-docs",
             "index": "projects/ngx-fomantic-ui-docs/src/index.html",
             "main": "projects/ngx-fomantic-ui-docs/src/main.ts",
@@ -88,6 +94,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
