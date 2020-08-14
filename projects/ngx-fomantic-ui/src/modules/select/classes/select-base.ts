@@ -1,20 +1,4 @@
-import {
-  AfterContentInit,
-  ContentChild,
-  ContentChildren,
-  ElementRef,
-  EventEmitter,
-  HostBinding,
-  HostListener,
-  Input,
-  OnDestroy,
-  Output,
-  QueryList,
-  TemplateRef,
-  ViewChild,
-  ViewContainerRef,
-  AfterViewInit
-} from '@angular/core';
+import { AfterContentInit, ContentChild, ContentChildren, ElementRef, EventEmitter, HostBinding, HostListener, Input, OnDestroy, Output, QueryList, TemplateRef, ViewChild, ViewContainerRef, AfterViewInit, Directive } from '@angular/core';
 import {Subscription} from 'rxjs';
 import {DropdownService, FuiDropdownMenu} from '../../dropdown/internal';
 import {FilterFn, LookupFn, SearchService} from '../../search/internal';
@@ -29,6 +13,7 @@ export interface IOptionContext<T> extends ITemplateRefContext<T> {
 
 // We use generic type T to smenuTransitionDurationpecify the type of the options we are working with,
 // and U to specify the type of the property of the option used as the value.
+@Directive()
 export abstract class FuiSelectBase<T, U> implements AfterViewInit, OnDestroy {
 
   public dropdownService: DropdownService;

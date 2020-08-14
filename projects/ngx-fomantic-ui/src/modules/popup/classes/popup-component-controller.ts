@@ -1,8 +1,9 @@
-import {ComponentRef, ElementRef, Renderer2, Type} from '@angular/core';
+import { ComponentRef, ElementRef, Renderer2, Type, Directive } from '@angular/core';
 import {FuiComponentFactory} from '../../../misc/util/internal';
 import {FuiPopupController} from './popup-controller';
 import {PopupConfig} from './popup-config';
 
+@Directive()
 export class FuiPopupComponentController<T> extends FuiPopupController {
   // Stores reference to generated content component.
   private _contentComponentRef?: ComponentRef<T>;

@@ -1,4 +1,4 @@
-import {ElementRef, Renderer2, TemplateRef} from '@angular/core';
+import { ElementRef, Renderer2, TemplateRef, Directive } from '@angular/core';
 import {IPopup, FuiPopupController} from './popup-controller';
 import {IImplicitContext, FuiComponentFactory} from '../../../misc/util/internal';
 import {IPopupConfig, PopupConfig} from './popup-config';
@@ -19,6 +19,7 @@ export class TemplatePopupConfig<T> extends PopupConfig {
   public context?: T;
 }
 
+@Directive()
 export class FuiPopupTemplateController<T> extends FuiPopupController {
   public template?: TemplateRef<ITemplatePopupContext<T>>;
   public context?: T;

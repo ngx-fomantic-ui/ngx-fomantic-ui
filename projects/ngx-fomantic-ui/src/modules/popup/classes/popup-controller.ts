@@ -1,4 +1,4 @@
-import {ComponentRef, ElementRef, HostListener, OnDestroy, Renderer2} from '@angular/core';
+import { ComponentRef, ElementRef, HostListener, OnDestroy, Renderer2, Directive } from '@angular/core';
 import {FuiComponentFactory} from '../../../misc/util/internal';
 import {IPopupConfig, PopupConfig, PopupTrigger} from './popup-config';
 import {FuiPopup} from '../components/popup';
@@ -12,6 +12,7 @@ export interface IPopup {
   toggle(): void;
 }
 
+@Directive()
 export abstract class FuiPopupController implements IPopup, OnDestroy {
   // Stores reference to generated popup component.
   private _componentRef: ComponentRef<FuiPopup>;
