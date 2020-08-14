@@ -40,7 +40,7 @@ export class FuiCheckbox implements ICustomValueAccessorHost<boolean> {
   @HostBinding('class.read-only')
   @Input()
   public isReadonly: boolean;
-  @ViewChild('checkbox', {static: false})
+  @ViewChild('checkbox')
   private _checkboxElement: ElementRef;
 
   constructor() {

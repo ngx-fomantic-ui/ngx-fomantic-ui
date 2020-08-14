@@ -47,7 +47,7 @@ export class FuiRadio<T> implements ICustomValueAccessorHost<T> {
   @Input()
   public isReadonly: boolean;
 
-  @ViewChild('radio', {static: false})
+  @ViewChild('radio')
   private _radioElement: ElementRef;
 
   constructor() {

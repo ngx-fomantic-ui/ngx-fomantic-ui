@@ -26,7 +26,7 @@ export class FuiDropdownMenuItem {
 
   // Stores the class name used for a 'selected' item.
   public selectedClass: string;
-  @ContentChild(forwardRef(() => FuiDropdownMenu), {static: false})
+  @ContentChild(forwardRef(() => FuiDropdownMenu))
   public childDropdownMenu: FuiDropdownMenu;
 
   constructor(private _renderer: Renderer2, public element: ElementRef) {

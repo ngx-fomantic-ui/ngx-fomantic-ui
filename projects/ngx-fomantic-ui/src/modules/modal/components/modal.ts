@@ -88,7 +88,7 @@ export class FuiModal<T, U> implements OnInit, AfterViewInit {
   // `ViewContainerRef` for the element the template gets injected as a sibling of.
   @ViewChild('templateSibling', {read: ViewContainerRef, static: true})
   public templateSibling: ViewContainerRef;
-  @ViewChild('modal', {static: false})
+  @ViewChild('modal')
   private _modalElement: ElementRef;
   // Whether or not the modal should always display a scrollbar.
   private _mustAlwaysScroll: boolean;

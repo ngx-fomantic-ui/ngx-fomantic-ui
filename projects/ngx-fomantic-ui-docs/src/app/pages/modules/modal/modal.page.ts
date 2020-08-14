@@ -236,7 +236,7 @@ this.modalService
     template: exampleTemplateTemplate
 })
 export class ModalExampleTemplate {
-    @ViewChild('modalTemplate', {static: false})
+    @ViewChild('modalTemplate')
     public modalTemplate: ModalTemplate<{ data: string }, string, string>;
 
     public dynamicContent = 'Example of dynamic content.';

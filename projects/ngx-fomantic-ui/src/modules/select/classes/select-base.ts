@@ -62,9 +62,9 @@ export abstract class FuiSelectBase<T, U> implements AfterViewInit, OnDestroy {
   protected _renderedOptions: QueryList<FuiSelectOption<T>>;
   // Keep track of all of the subscriptions to the selected events on the rendered options.
   private _renderedSubscriptions: Subscription[];
-  @ViewChild(FuiSelectSearch, {static: false})
+  @ViewChild(FuiSelectSearch)
   private _internalSearch?: FuiSelectSearch;
-  @ContentChild(FuiSelectSearch, {static: false})
+  @ContentChild(FuiSelectSearch)
   private _manualSearch?: FuiSelectSearch;
   @Input('tabindex')
   private _tabIndex?: number;

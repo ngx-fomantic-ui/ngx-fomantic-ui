@@ -91,7 +91,7 @@ export class FuiSearch<T> implements AfterViewInit {
   public transition: string;
   @Input()
   public transitionDuration: number;
-  @ViewChild(FuiDropdownMenu, {static: false})
+  @ViewChild(FuiDropdownMenu)
   private _menu: FuiDropdownMenu;
 
   constructor(private _element: ElementRef, renderer: Renderer2, private _localizationService: FuiLocalizationService) {

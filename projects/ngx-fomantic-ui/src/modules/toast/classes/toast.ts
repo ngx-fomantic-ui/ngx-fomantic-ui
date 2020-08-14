@@ -54,8 +54,8 @@ export class FuiToast implements OnInit {
 
   @Output('close') closeEvent = new EventEmitter();
 
-  @ContentChild(FuiToastTitle, {static: false}) titleTpl: FuiToastTitle;
-  @ContentChild(FuiToastMessage, {static: false}) messageTpl: FuiToastMessage;
+  @ContentChild(FuiToastTitle) titleTpl: FuiToastTitle;
+  @ContentChild(FuiToastMessage) messageTpl: FuiToastMessage;
 
   progress: number;
   icons = {

@@ -76,7 +76,7 @@ export class FuiPopup implements IPopup {
   @HostBinding('attr.tabindex')
   public readonly tabindex: number;
   // `ElementRef` for the positioning subject.
-  @ViewChild('container', {read: ViewContainerRef, static: false})
+  @ViewChild('container', { read: ViewContainerRef })
   private _container: ViewContainerRef;
 
   constructor(public elementRef: ElementRef) {

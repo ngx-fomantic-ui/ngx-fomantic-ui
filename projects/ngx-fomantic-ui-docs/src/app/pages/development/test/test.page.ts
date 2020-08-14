@@ -8,7 +8,7 @@ import {FuiToastContainer} from 'ngx-fomantic-ui';
 export class TestPage {
   toastCounter = 0;
 
-  @ViewChild('toastContainer', {static: false})
+  @ViewChild('toastContainer')
   toastContainer: FuiToastContainer;
 
   addToast() {
