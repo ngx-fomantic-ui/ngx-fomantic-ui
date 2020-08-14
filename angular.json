@@ -64,7 +64,7 @@
             "styles": [
               "projects/ngx-fomantic-ui-docs/src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -140,7 +140,10 @@
           }
         }
       }
-    },
+    }
   },
-  "defaultProject": "ngx-fomantic-ui"
+  "defaultProject": "ngx-fomantic-ui",
+  "cli": {
+    "packageManager": "npm"
+  }
 }
