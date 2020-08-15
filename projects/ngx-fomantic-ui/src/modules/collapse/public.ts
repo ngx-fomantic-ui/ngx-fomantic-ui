@@ -1,3 +1,4 @@
 export {
-  FuiCollapseModule
+  FuiCollapseModule,
+  FuiCollapse
 } from './internal';

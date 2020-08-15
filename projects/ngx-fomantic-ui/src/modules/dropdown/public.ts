@@ -1,4 +1,7 @@
 export {
   FuiDropdownModule,
-  DropdownAutoCloseType
+  DropdownAutoCloseType,
+  FuiDropdown,
+  FuiDropdownMenu,
+  FuiDropdownMenuItem
 } from './internal';

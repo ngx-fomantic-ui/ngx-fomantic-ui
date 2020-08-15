@@ -1,3 +1,4 @@
 export {
-  FuiProgressModule
+  FuiProgressModule,
+  FuiProgress
 } from './internal';

@@ -1,3 +1,4 @@
 export {
-  FuiPaginationModule
+  FuiPaginationModule,
+  FuiPagination
 } from './internal';

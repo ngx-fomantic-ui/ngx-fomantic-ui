@@ -5,7 +5,9 @@ export {
   IPopupConfig,
   ITemplatePopupConfig,
   ITemplatePopupContext,
-  PopupTrigger
+  PopupTrigger,
+  FuiPopup,
+  FuiPopupDirective
 } from './internal';
 
 import {PositioningPlacement} from '../../misc/util/internal';

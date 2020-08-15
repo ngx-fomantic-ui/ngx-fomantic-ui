@@ -1,7 +1,6 @@
 export {
   FuiModalModule,
   FuiModalService,
-  Modal as FuiModal,
   ModalResult,
   ModalControls,
   ActiveModal as FuiActiveModal,
@@ -9,5 +8,6 @@ export {
   TemplateModalConfig,
   ComponentModalConfig,
   ModalTemplate,
-  ModalSize
+  ModalSize,
+  FuiModal
 } from './internal';

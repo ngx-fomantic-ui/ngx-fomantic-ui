@@ -1,3 +1,6 @@
 export {
-  FuiTabsModule
+  FuiTabsModule,
+  FuiTabset,
+  FuiTabHeader,
+  FuiTabContent
 } from './internal';

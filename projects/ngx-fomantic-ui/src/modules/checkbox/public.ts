@@ -1,3 +1,8 @@
 export {
-  FuiCheckboxModule
+  FuiCheckboxModule,
+  FuiCheckbox,
+  FuiCheckboxValueAccessor,
+  FuiRadio,
+  FuiRadioValueAccessor,
+  FuiRadioManager
 } from './internal';

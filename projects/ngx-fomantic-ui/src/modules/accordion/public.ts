@@ -1,3 +1,5 @@
 export {
-  FuiAccordionModule
+  FuiAccordionModule,
+  FuiAccordion,
+  FuiAccordionPanel
 } from './internal';

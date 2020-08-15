@@ -3,5 +3,6 @@ export {
   SearchService,
   LookupFn,
   FilterFn,
-  IResultContext
+  IResultContext,
+  FuiSearch
 } from './internal';

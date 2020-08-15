@@ -1,3 +1,5 @@
 export {
-  FuiRatingModule
+  FuiRatingModule,
+  FuiRating,
+  FuiRatingValueAccessor
 } from './internal';

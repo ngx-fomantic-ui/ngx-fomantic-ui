@@ -7,5 +7,6 @@ export {
   FuiActiveMessage,
   MessageState,
   MessagePosition,
-  FuiMessageService
+  FuiMessageService,
+  FuiMessage
 } from './internal';

@@ -1,3 +1,4 @@
 export {
-  FuiDimmerModule
+  FuiDimmerModule,
+  FuiDimmer
 } from './internal';

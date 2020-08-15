@@ -1,4 +1,8 @@
 export {
   FuiDatepickerModule,
-  DatepickerMode
+  DatepickerMode,
+  FuiDatepickerDirective,
+  FuiDatepickerDirectiveValueAccessor,
+  FuiDatepickerDirectiveValidator,
+  FuiDatepickerInputDirective
 } from './internal';

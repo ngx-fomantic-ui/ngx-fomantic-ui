@@ -1,4 +1,10 @@
 export {
   FuiSelectModule,
-  IOptionContext
+  IOptionContext,
+  FuiSelect,
+  FuiSelectOption,
+  FuiSelectSearch,
+  FuiSelectValueAccessor,
+  FuiMultiSelect,
+  FuiMultiSelectValueAccessor
 } from './internal';
