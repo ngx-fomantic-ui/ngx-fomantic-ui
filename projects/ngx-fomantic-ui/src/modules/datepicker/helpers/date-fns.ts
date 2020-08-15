@@ -1,6 +1,6 @@
 import {IDatepickerLocaleValues} from '../../../behaviors/localization/internal';
 import {format, parse} from 'date-fns';
-import * as defaultLocale from 'date-fns/locale/en';
+import * as defaultLocale from 'date-fns';
 
 interface IDateFnsLocaleValues {
   [name: string]: string[];
@@ -129,6 +129,6 @@ export class DateFnsParser {
   }
 
   public parse(dS: string, f: string, bD: Date): Date {
-    return parse(dS, this._config);
+    return parse(dS, this._config, bD);
   }
 }
