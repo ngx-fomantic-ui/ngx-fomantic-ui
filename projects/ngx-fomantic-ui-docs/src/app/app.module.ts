@@ -12,6 +12,34 @@ import { AppComponent } from './app.component';
 
 import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
+export function loadHighlightLibCore() {
+  return import('highlight.js/lib/core');
+}
+
+export function xmlLang() {
+  return import('highlight.js/lib/languages/xml')
+}
+
+
+export function typescriptLang() {
+  return import('highlight.js/lib/languages/typescript')
+}
+
+
+export function javascriptLang() {
+  return import('highlight.js/lib/languages/javascript')
+}
+
+
+export function bashLang() {
+  return import('highlight.js/lib/languages/bash')
+}
+
+export function cssLang() {
+  return import('highlight.js/lib/languages/css')
+}
+
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -32,13 +60,13 @@ import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        coreLibraryLoader: loadHighlightLibCore,
         languages: {
-          xml: () => import('highlight.js/lib/languages/xml'),
-          typescript: () => import('highlight.js/lib/languages/typescript'),
-          javascript: () => import('highlight.js/lib/languages/javascript'),
-          bash: () => import('highlight.js/lib/languages/bash'),
-          markup: () => import('highlight.js/lib/languages/css')
+          xml: xmlLang,
+          typescript: typescriptLang,
+          javascript: javascriptLang,
+          bash: bashLang,
+          markup: cssLang
         }
       }
     }
