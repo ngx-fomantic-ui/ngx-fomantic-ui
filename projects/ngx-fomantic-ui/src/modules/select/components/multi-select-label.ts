@@ -12,9 +12,9 @@ import {
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import {FuiTransition, Transition, TransitionController, TransitionDirection} from '../../transition/internal';
-import {HandledEvent, FuiComponentFactory} from '../../../misc/util/internal';
-import {IOptionContext} from '../classes/select-base';
+import { FuiTransition, Transition, TransitionController, TransitionDirection } from '../../transition/internal';
+import { HandledEvent, FuiComponentFactory } from '../../../misc/util/internal';
+import { IOptionContext } from '../classes/select-base';
 
 // See https://github.com/Microsoft/TypeScript/issues/13449.
 const templateRef = TemplateRef;
@@ -44,14 +44,14 @@ export class FuiMultiSelectLabel<T> extends FuiTransition {
   @Input()
   public formatter: (obj: T) => string;
   // Placeholder to draw template beside.
-  @ViewChild('templateSibling', { read: ViewContainerRef })
+  @ViewChild('templateSibling', { read: ViewContainerRef, static: true })
   public templateSibling: ViewContainerRef;
   private _transitionController: TransitionController;
 
   constructor(renderer: Renderer2,
-              element: ElementRef,
-              changeDetector: ChangeDetectorRef,
-              public componentFactory: FuiComponentFactory) {
+    element: ElementRef,
+    changeDetector: ChangeDetectorRef,
+    public componentFactory: FuiComponentFactory) {
 
     super(renderer, element, changeDetector);
 
