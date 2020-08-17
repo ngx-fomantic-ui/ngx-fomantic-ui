@@ -1,29 +1,16 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FuiPopupModule, FuiSidebarModule} from 'ngx-fomantic-ui';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FuiPopupModule, FuiSidebarModule } from 'ngx-fomantic-ui';
 
-import {DemoRoutingModule} from './app.routing';
-import {DemoComponentsModule} from './components/demo-components.module';
-import {DemoModalsModule} from './modals/demo-modals.module';
-import {DemoPagesModule} from './pages/demo-pages.module';
+import { DemoRoutingModule } from './app.routing';
+import { DemoComponentsModule } from './components/demo-components.module';
+import { DemoModalsModule } from './modals/demo-modals.module';
+import { DemoPagesModule } from './pages/demo-pages.module';
 
-import {AppComponent} from './app.component';
+import { AppComponent } from './app.component';
 
-import css from 'highlight.js/lib/languages/css';
-import bash from 'highlight.js/lib/languages/bash';
-import javascript from 'highlight.js/lib/languages/javascript';
-import typescript from 'highlight.js/lib/languages/typescript';
-import {HIGHLIGHT_OPTIONS, HighlightModule} from 'ngx-highlightjs';
-
-export function hljsLanguages() {
-  return [
-    {name: 'javascript', func: javascript},
-    {name: 'typescript', func: typescript},
-    {name: 'bash', func: bash},
-    {name: 'markup', func: css}
-  ];
-}
+import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs';
 
 @NgModule({
   imports: [
@@ -45,7 +32,14 @@ export function hljsLanguages() {
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
-        languages: hljsLanguages
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          xml: () => import('highlight.js/lib/languages/xml'),
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          javascript: () => import('highlight.js/lib/languages/javascript'),
+          bash: () => import('highlight.js/lib/languages/bash'),
+          markup: () => import('highlight.js/lib/languages/css')
+        }
       }
     }
   ],

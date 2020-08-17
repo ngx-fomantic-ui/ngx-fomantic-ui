@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "lib:compile:locales": "tsc --project ./projects/ngx-fomantic-ui/src/behaviors/localization/tsconfig.locales.json && node ./projects/ngx-fomantic-ui/scripts/locales",
-    "build:lib:prod": "ng build ngx-fomantic-ui --trace-warnings && npm run lib:compile:locales",
+    "build:lib:prod": "ng build ngx-fomantic-ui && npm run lib:compile:locales",
     "build:docs:prod": "ng build ngx-fomantic-ui-docs --prod",
     "serve:docs": "ng serve ngx-fomantic-ui-docs",
     "docker:serve:docs": "ng serve ngx-fomantic-ui-docs --host 0.0.0.0"
@@ -27,11 +27,13 @@
     "core-js": "^3.1.4",
     "date-fns": "^1.30.1",
     "element-closest": "^3.0.1",
-    "highlight.js": "^9.15.8",
-    "ngx-highlightjs": "^3.0.3",
+    "highlight.js": "^10.1.2",
+    "highlightjs-line-numbers.js": "^2.8.0",
+    "ngx-highlightjs": "^4.1.1",
     "popper.js": "^1.15.0",
     "rxjs": "~6.6.2",
     "tslib": "^2.0.0",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -40,6 +42,7 @@
     "@angular/cli": "~10.0.6",
     "@angular/compiler-cli": "~10.0.9",
     "@angular/language-service": "~10.0.9",
+    "@types/highlight.js": "^9.12.4",
     "@types/jasmine": "~3.3.13",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",

@@ -41,7 +41,7 @@ See the [Documentation](https://ngx-fomantic-ui.github.io/ngx-fomantic-ui) for i
 
 ## Dependencies
 
-* [Angular](https://angular.io) (^7.0.0)
+* [Angular](https://angular.io) (^10.0.0)
 * [Fomantic UI CSS](http://fomantic-ui.com/) (^2.7.4) (jQuery is **not** required)
 
 ## Component Support

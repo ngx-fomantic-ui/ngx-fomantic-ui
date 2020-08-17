@@ -1,5 +1,5 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
-import {HighlightJS} from 'ngx-highlightjs';
+import { Component, Input, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
+import { HighlightJS, HighlightResult } from 'ngx-highlightjs';
 
 @Component({
   selector: 'demo-codeblock',
@@ -21,7 +21,9 @@ export class CodeblockComponent implements OnInit {
   constructor(private highlight: HighlightJS) {
   }
 
-  public ngOnInit(): void {
-    this.html = this.highlight.highlightAuto(this.src, ['javascript', 'typescript', 'css', 'markup', 'bash']).value;
+  ngOnInit(): void {
+    this.highlight.highlightAuto(this.src, ['xml', 'javascript', 'typescript', 'markup', 'bash']).subscribe((result: HighlightResult) => {
+      this.html = result.value;
+    });
   }
 }
