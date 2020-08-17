@@ -4,7 +4,7 @@ import { ApiDefinition } from '../../../components/api/api.component';
 
 const exampleStandardTemplate = `
 <div class="ui segment">
-    <img src="https://goo.gl/VUcnwx" class="ui image" [fuiTransition]="transitionController">
+    <img src="https://lerebooks.files.wordpress.com/2012/11/eye.jpg?w=150" class="ui image" [fuiTransition]="transitionController">
 </div>
 <fui-select class="selection" [(ngModel)]="transitionName" [options]="transitions" [isSearchable]="true" #animSelect>
     <fui-select-option *ngFor="let a of animSelect.availableOptions" [value]="a"></fui-select-option>
@@ -42,7 +42,7 @@ export class MyComponent {
 
     public transitionElementCode = `
 <div class="ui segment">
-    <img src="https://goo.gl/VUcnwx" class="ui image" [fuiTransition]="transitionController">
+    <img src="https://lerebooks.files.wordpress.com/2012/11/eye.jpg?w=150" class="ui image" [fuiTransition]="transitionController">
 </div>
 `;
 
