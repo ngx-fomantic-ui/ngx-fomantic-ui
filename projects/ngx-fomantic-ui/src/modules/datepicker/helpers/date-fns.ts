@@ -129,6 +129,6 @@ export class DateFnsParser {
   }
 
   public parse(dS: string, f: string, bD: Date): Date {
-    return parse(dS, this._config, bD);
+    return parse(dS, this._config);
   }
 }

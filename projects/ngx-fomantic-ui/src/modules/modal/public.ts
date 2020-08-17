@@ -9,5 +9,6 @@ export {
   ComponentModalConfig,
   ModalTemplate,
   ModalSize,
+  Modal as FuiBaseModal,
   FuiModal
 } from './internal';

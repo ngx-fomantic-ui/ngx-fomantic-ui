@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComponentModalConfig, ModalSize, FuiModal } from 'ngx-fomantic-ui';
+import { ComponentModalConfig, ModalSize, FuiBaseModal } from 'ngx-fomantic-ui';
 
 interface IConfirmModalContext {
     question: string;
@@ -20,7 +20,7 @@ interface IConfirmModalContext {
 `
 })
 export class ConfirmModalComponent {
-    constructor(public modal: FuiModal<IConfirmModalContext, void, void>) {}
+    constructor(public modal: FuiBaseModal<IConfirmModalContext, void, void>) {}
 }
 
 export class ConfirmModal extends ComponentModalConfig<IConfirmModalContext, void, void> {

@@ -11,9 +11,9 @@ export class FuiTabset implements AfterContentInit {
 
   // List of all tabs in the tabset.
   public tabs: Tab[];
-  @ContentChildren(FuiTabHeader)
+  @ContentChildren(FuiTabHeader, {descendants: true})
   private _tabHeaders: QueryList<FuiTabHeader>;
-  @ContentChildren(FuiTabContent)
+  @ContentChildren(FuiTabContent, {descendants: true})
   private _tabContents: QueryList<FuiTabContent>;
   // Keeps track of the number of times `internalComponentsUpdated` is called.
   private _barrierCount: number;

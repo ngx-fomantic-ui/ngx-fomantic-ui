@@ -85,7 +85,7 @@ export class FuiDropdownMenu extends FuiTransition implements AfterContentInit, 
   @Input()
   public menuSelectedItemClass: string;
   private _transitionController: TransitionController;
-  @ContentChildren(FuiDropdownMenuItem)
+  @ContentChildren(FuiDropdownMenuItem, {descendants: true})
   private _itemsQueryInternal: QueryList<FuiDropdownMenuItem>;
   private _itemsQueryOverride: QueryList<FuiDropdownMenuItem>;
   private _parentKeyDownListener: () => void;

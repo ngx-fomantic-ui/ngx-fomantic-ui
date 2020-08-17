@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComponentModalConfig, ModalSize, FuiModal } from 'ngx-fomantic-ui';
+import { ComponentModalConfig, ModalSize, FuiBaseModal } from 'ngx-fomantic-ui';
 
 interface IAlertModalContext {
     message: string;
@@ -19,7 +19,7 @@ interface IAlertModalContext {
 `
 })
 export class AlertModalComponent {
-    constructor(public modal: FuiModal<IAlertModalContext, void, void>) {}
+    constructor(public modal: FuiBaseModal<IAlertModalContext, void, void>) {}
 }
 
 export class AlertModal extends ComponentModalConfig<IAlertModalContext, void, void> {

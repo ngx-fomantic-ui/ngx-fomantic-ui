@@ -2,9 +2,6 @@ import {Component, HostBinding, Input, TemplateRef, ViewChild, ViewContainerRef}
 import {FuiComponentFactory} from '../../../misc/util/internal';
 import {IResultContext} from './search';
 
-// See https://github.com/Microsoft/TypeScript/issues/13449.
-const templateRef = TemplateRef;
-
 @Component({
   selector: 'fui-search-result',
   template: `
@@ -25,7 +22,7 @@ export class FuiSearchResult<T> {
   @Input()
   public formatter: (obj: T, query: string) => string;
   // Placeholder to draw template beside.
-  @ViewChild('templateSibling', { read: ViewContainerRef })
+  @ViewChild("templateSibling", { read: ViewContainerRef, static: true })
   public templateSibling: ViewContainerRef;
 
   constructor(public componentFactory: FuiComponentFactory) {

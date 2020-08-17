@@ -4,7 +4,7 @@ import {
     ComponentModalConfig,
     ModalSize,
     ModalTemplate,
-    FuiModal,
+    FuiBaseModal,
     FuiModalService,
     TemplateModalConfig
 } from 'ngx-fomantic-ui';
@@ -270,7 +270,7 @@ interface IConfirmModalContext {
     template: exampleComponentModalTemplate
 })
 export class ConfirmModalComponent {
-    constructor(public modal: FuiModal<IConfirmModalContext, void, void>) {}
+    constructor(public modal: FuiBaseModal<IConfirmModalContext, void, void>) {}
 }
 
 export class ConfirmModal extends ComponentModalConfig<IConfirmModalContext, void, void> {
