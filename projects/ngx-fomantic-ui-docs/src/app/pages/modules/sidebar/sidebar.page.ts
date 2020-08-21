@@ -98,6 +98,12 @@ export class SidebarPage {
                     type: 'boolean',
                     description: 'Sets whether the page content beside the sidebar is dimmed when the sidebar is visible.',
                     defaultValue: 'false'
+                },
+                {
+                    name: 'isPushedOffScreen',
+                    type: 'boolean',
+                    description: 'Sets whether the page content beside the sidebar will maintain original width and get partially pushed off screen, or stay fully visible and decrease width',
+                    defaultValue: 'true'
                 }
             ]
         }
