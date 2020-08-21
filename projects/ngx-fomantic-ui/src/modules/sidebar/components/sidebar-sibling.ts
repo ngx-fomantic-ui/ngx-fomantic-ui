@@ -19,8 +19,6 @@ export class FuiSidebarSibling {
   public readonly hasClasses: boolean;
   @Input()
   public canCloseSidebar = true;
-  @Input()
-  public isPushedOffScreen = true;
 
   constructor(private _renderer: Renderer2, private _element: ElementRef) {
     this.isDimmedWhenVisible = false;
@@ -67,22 +65,12 @@ export class FuiSidebarSibling {
   private updateTransform(): void {
     this._renderer.removeStyle(this._element.nativeElement, 'transform');
     this._renderer.removeStyle(this._element.nativeElement, '-webkit-transform');
-    if (!this.isPushedOffScreen) {
-      this._renderer.removeStyle(this._element.nativeElement, 'width');
-    }
 
-    if (this.service.isVisible) {
-      if(this.service.transition !== SidebarTransition.Overlay &&
-        this.service.transition !== SidebarTransition.ScaleDown){
-        const translate = `translate3d(${this.service.width}px, ${this.service.height}px, 0)`;
-        this._renderer.setStyle(this._element.nativeElement, 'transform', translate);
-        this._renderer.setStyle(this._element.nativeElement, '-webkit-transform', translate);
-      }
-      // Decrease width of sibling container when sidebar opens to keep all contents visible
-      if (!this.isPushedOffScreen) {
-        const newWidth = (100 - (this.service.width/window.innerWidth)*100).toFixed(2) + '%';
-        this._renderer.setStyle(this._element.nativeElement, 'width', newWidth);
-      }
+    if (this.service.isVisible && this.service.transition !== SidebarTransition.Overlay &&
+      this.service.transition !== SidebarTransition.ScaleDown){
+      const translate = `translate3d(${this.service.width}px, ${this.service.height}px, 0)`;
+      this._renderer.setStyle(this._element.nativeElement, 'transform', translate);
+      this._renderer.setStyle(this._element.nativeElement, '-webkit-transform', translate);
     }
   }
 }
