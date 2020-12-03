@@ -66,10 +66,8 @@ export class FuiSidebarSibling {
     this._renderer.removeStyle(this._element.nativeElement, 'transform');
     this._renderer.removeStyle(this._element.nativeElement, '-webkit-transform');
 
-    if (this.service.isVisible &&
-      this.service.transition !== SidebarTransition.Overlay &&
-      this.service.transition !== SidebarTransition.ScaleDown) {
-
+    if (this.service.isVisible && this.service.transition !== SidebarTransition.Overlay &&
+      this.service.transition !== SidebarTransition.ScaleDown){
       const translate = `translate3d(${this.service.width}px, ${this.service.height}px, 0)`;
       this._renderer.setStyle(this._element.nativeElement, 'transform', translate);
       this._renderer.setStyle(this._element.nativeElement, '-webkit-transform', translate);

@@ -141,8 +141,8 @@ export class FuiPopup implements IPopup {
   }
 
   public open(): void {
-    // Only attempt to open if currently closed.
-    if (!this.isOpen) {
+    // Only attempt to open if currently closed and there is text to display.
+    if (!this.isOpen && (!!this.config.header || !!this.config.text)) {
       // Cancel the closing timer.
       clearTimeout(this.closingTimeout);
 
