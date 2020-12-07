@@ -27,7 +27,7 @@
     "core-js": "^3.6.5",
     "date-fns": "^1.30.1",
     "element-closest": "^3.0.2",
-    "highlight.js": "^10.1.2",
+    "highlight.js": "^10.4.1",
     "highlightjs-line-numbers.js": "^2.8.0",
     "ngx-highlightjs": "^4.1.1",
     "popper.js": "^1.16.1",
